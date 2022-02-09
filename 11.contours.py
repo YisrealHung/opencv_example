@@ -11,6 +11,7 @@ cnts, _ = cv2.findContours(canny, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 
 for number, i in enumerate(cnts):
     area = cv2.contourArea(i)
+
     if area > 10000:
         cv2.drawContours(img, cnts, number, (255, 0, 255), 2)
 

@@ -1,15 +1,20 @@
 import cv2
 
-img = cv2.imread("data/box.jpg")
+img = cv2.imread("data/box.png")
 print(img.shape)
 
 cv2.imshow("windows", img)
 
-img[:,:,0] = 0
-img[:,:,1] = 0
-img[:,:,2] = 0
+'''
+img[:,:,0]
+img[:,:,1]
+img[:,:,2]
+'''
 
-cv2.imshow("choose", img)
+cv2.imshow("Blue", img[:,:,0])
+cv2.imshow("Green", img[:,:,1])
+cv2.imshow("Red", img[:,:,2])
+
 
 cv2.waitKey(0)
 cv2.destroyAllWindows()
